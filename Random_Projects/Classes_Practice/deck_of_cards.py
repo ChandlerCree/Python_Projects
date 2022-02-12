@@ -48,6 +48,7 @@ class Player:
 
 if __name__ == "__main__":
     deck = Deck()
+    deck.show()
     deck.shuffle()
 
     bob = Player("Bob")
