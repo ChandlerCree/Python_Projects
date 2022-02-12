@@ -1,16 +1,98 @@
-from model.word_list import WordList
-from model.word import Word
+from model.game import Game
+from view.board_console_view import BoardConsoleView
+from view.game_console_view import GameConsoleView
+from controller.game_controller import GameController
 
+#filepath for list of initial words
 word_list_filepath = 'c:/Users/chand/Documents/Python_Coding_Projects/Python_Games/Wordle/resources/words.txt'
-wl1 = []
+
+game = Game(word_list_filepath)
+
+board_view = BoardConsoleView(game)
+game_view = GameConsoleView(board_view)
+
+controller = GameController(game, game_view)
+controller.run_game()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'''
+#generates Word object
 word = Word
 
+#generates WordList object
 wl1 = WordList(word_list_filepath)
-#wl1.make_word_list()
 
+#get input from console for desired word length
+inp = input('Enter desired word length: ')
+
+#shuffle the word list
 wl1.shuffle()
-word = wl1.drawWord()
+
+#sort the word list by word length
+wl1.sort_by_length()
+
+#prints entire list of value (inp) to console
+#wl1.show(int(inp))
+
+#draws a word from the top of the list of words len(inp)
+word = wl1.draw_word(int(inp))
+
+#shows the word to console
 word.show()
+
+print('\n\n\n\n')
+print('Game Starting!\n')
+'''
+
+
+
+
 
 
 '''

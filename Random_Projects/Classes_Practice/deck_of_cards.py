@@ -48,9 +48,10 @@ class Player:
 
 if __name__ == "__main__":
     deck = Deck()
-    deck.show()
     deck.shuffle()
+    deck.show()
+ 
 
-    bob = Player("Bob")
-    bob.draw(deck)
-    bob.showHand()
+    #bob = Player("Bob")
+    #bob.draw(deck)
+    #bob.showHand()

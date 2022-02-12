@@ -1,5 +1,4 @@
 
-
 class Word:
     def __init__(self, word, length):
         self.leng = length
@@ -7,3 +6,6 @@ class Word:
 
     def show(self):
         print("{} : {} letters".format(self.word, self.leng))
+
+    def get_word(self):
+        return self.word
